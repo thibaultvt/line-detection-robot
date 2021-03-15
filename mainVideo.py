@@ -8,7 +8,7 @@ cap = cap = cv2.VideoCapture(videoPath)
 
 while(True):
     ret, frame = cap.read()
-     #   Flip horizontally and vertically
+    #   Flip horizontally and vertically
     frame = cv2.flip(frame, -1)
     
     thresholdFrame = ld.getThresholdedFrame(frame)

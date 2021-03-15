@@ -58,9 +58,3 @@ def steeringWheel(steeringAngle):
         print('going straight')
         p1.ChangeDutyCycle(constant)
         p2.ChangeDutyCycle(constant)
-
-
-while(1):
-    x = int(input("SteeringAngle: "))
-    steeringWheel(x)
-
