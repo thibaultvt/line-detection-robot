@@ -433,16 +433,17 @@ GPIO.output(in2,GPIO.LOW)
 GPIO.output(in3,GPIO.HIGH)
 GPIO.output(in4,GPIO.LOW)
 
-#   Start the PWM with a duty cycle of 0
+#   Start the PWM with a duty cycle of 0 (stand still)
 p1.start(0)
 p2.start(0)
 ```
 
 After that we write a function that uses the steering angle parameter to steer accordingly. How accurate your robot can steer is fully up to you. I chose to only implement one turning speed, but you could take the previous steering angle into account or have multiple turning speeds based on the steering angle’s value if you want to.
 
+I suggest playing around with the constant and steer value until you find the perfect fit for your track.
+
 ```py
 def steeringWheel(steeringAngle):
-    #   steeringAngle between 0 and 85 => GO LEFT
     steer = 90
     constant = 70
     if 0 <= steeringAngle <= 85:
